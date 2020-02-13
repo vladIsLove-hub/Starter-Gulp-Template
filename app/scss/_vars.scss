@@ -1,6 +1,19 @@
 $default-font: "roboto-example", sans-serif;
+$colorSlider: cadetblue;
+$bgDesc: #5f0c9e;
+$bgMainContainers: #343a40;
+$bgMyPhoto: rgba(70, 8, 139, 0.7);
+$usefulBg: #fff;
+$mySkillColor: #2c2c2c;
+$fontSizeIconsMySkills: 80px;
 
 
+@mixin textStyle($size, $position, $weight, $color) {
+    font-size: $size;
+    text-align: $position;
+    font-weight: $weight;
+    color: $color;
+}
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
 $grid-columns: 12;

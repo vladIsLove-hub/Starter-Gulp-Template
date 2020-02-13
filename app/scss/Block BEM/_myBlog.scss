@@ -1,0 +1,74 @@
+@import "../vars";
+@import "../libs";
+
+.myBlog{
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+    transform: rotateY(-30deg);
+    transition: all 0.3s ease;
+    box-shadow: 15px 15px 10px black;
+    @include media-breakpoint-down(md){
+        transform: none;
+        box-shadow: 0px 0px 10px black;
+    }
+    &__img{
+        transition: all 0.3s ease;
+        width: 302px;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        @include media-breakpoint-down(md){
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__social{
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        height: 40px;
+        width: 100px;
+        justify-content: space-around;
+    }
+    &__link{
+        display: none;
+        transition: all 0.3s ease;
+        background: white;
+        padding: 7px;
+        border-radius: 4px;
+        @include media-breakpoint-down(md){
+            display: flex;
+            text-decoration: none;
+            font-size: 26px;
+            color: darkred;
+            transition: all 0.3s ease;
+        }
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+}
+
+.myBlog:hover .myBlog__link{
+    display: flex;
+    text-decoration: none;
+    font-size: 26px;
+    color: darkred;
+    transition: all 0.3s ease;
+}
+
+.myBlog:hover .myBlog__img{
+    transform: scale(1.3,1.3);
+    @include media-breakpoint-down(md){
+        transform: none;
+    }
+}
+
+.customPerspective:hover .myBlog{
+    transform: none;
+    box-shadow: 0px 0px 10px black;
+}

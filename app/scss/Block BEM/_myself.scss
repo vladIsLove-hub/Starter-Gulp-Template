@@ -1,0 +1,60 @@
+@import "../vars";
+@import "../libs";
+
+.myself{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+    &:hover .myself__itsme{
+        display: flex;
+        @include textStyle(21px, left, 500, white);
+        margin-left: 20px;
+        text-shadow: 1px 1px 10px black;
+        border: 2px solid white;
+        padding: 10px;
+    }
+    &:hover .myself__btn{
+        display: flex;
+        @include textStyle(21px, left, 500, white);
+        margin-left: 20px;
+        text-shadow: 1px 1px 10px black;
+        padding: 10px;
+        text-decoration: none;
+        background-color: rgb(38, 3, 78);
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px white;
+        transition: all 0.4s ease;
+        &:hover{
+            transform: scale(1.1,1.1);
+            box-shadow: 0px 0px 15px white;
+        }
+    }
+    &__itsme{
+        display: none;
+    }
+    &__btn{
+        display: none;
+    }
+}
+
+.myPhoto:hover .myself{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+    background-color: $bgMyPhoto;
+    border-radius: 7px;
+    cursor: pointer;
+    @include media-breakpoint-down(md){
+        display: none;
+    }
+}
+
+// rgba(59, 0, 74, 0.486)

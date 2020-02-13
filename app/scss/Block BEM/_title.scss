@@ -1,0 +1,25 @@
+@import "../vars";
+@import "../libs";
+
+.title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    &_position{
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    &__main{
+        @include textStyle(34px, center, 500, white);
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 2px 2px 5px black;
+        line-height: 40px;
+        &_colorEdit{
+            color: white;
+        }
+    }
+}
+

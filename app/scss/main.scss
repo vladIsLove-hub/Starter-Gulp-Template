@@ -1,3 +1,24 @@
 @import "vars";
 @import "libs";
+@import "fonts";
+
+@import "Block Bem/customBootstrap";
+@import "Block Bem/centerBlock";
+@import "Block Bem/wrap";
+@import "Block Bem/title";
+@import "Block Bem/myPhoto";
+@import "Block Bem/myself";
+@import "Block Bem/aboutMe";
+@import "Block Bem/myBlog";
+@import "Block Bem/mySkills";
+@import "Block Bem/cooperation";
+
+.mainDesc{
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+}
 

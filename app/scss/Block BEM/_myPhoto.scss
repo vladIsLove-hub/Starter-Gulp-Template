@@ -1,0 +1,23 @@
+@import "../vars";
+@import "../libs";
+
+.myPhoto{
+    position: relative;
+    height: 200px;
+    background: url('../img/_src/iam.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 7px;
+    transform: rotateY(30deg);
+    transition: all 0.3s ease;
+    box-shadow: -15px 15px 10px black;
+    @include media-breakpoint-down(md){
+        transform: none;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+
+.customPerspective:hover .myPhoto{
+    transform: none;
+    box-shadow: 0px 0px 10px black;
+}
+
